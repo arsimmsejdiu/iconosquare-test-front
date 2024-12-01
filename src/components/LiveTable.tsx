@@ -127,6 +127,7 @@ const LiveTable: React.FC<LiveTableProps> = ({ editableCell, setEditableCell }) 
                 >
                     Reset All
                 </button>
+                <p className="text-red-500 font-normal text-xs mt-5">Please pause the data to be able to edit.</p>
             </div>
 
             <div className="flex border border-gray-300 rounded overflow-hidden">
