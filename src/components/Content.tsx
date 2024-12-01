@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
 import LiveTable from "./LiveTable";
 import LiveChart from "./LiveChart";
+
 import { useLiveChartContext } from "../hooks/useLiveChartContext";
 
 const Content = () => {

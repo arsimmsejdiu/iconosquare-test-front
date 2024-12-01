@@ -1,6 +1,7 @@
 import React from "react";
-import { TableRowProps } from "../types";
+
 import TableCell from "./TableCell";
+import { TableRowProps } from "../types";
 
 const TableRow: React.FC<TableRowProps> = ({
   event,

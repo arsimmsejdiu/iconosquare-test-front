@@ -1,10 +1,6 @@
 import React from "react";
 
-interface LogoProps {
-  size?: number;
-  className?: string;
-  [key: string]: any;
-}
+import { LogoProps } from "../types";
 
 const Logo = ({ size = 20, className, ...restProps }: LogoProps) => {
   return (

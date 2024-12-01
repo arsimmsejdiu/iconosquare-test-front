@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLiveChartContext } from "../hooks/useLiveChartContext";
+
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 import PaginationControls from "./PaginationControls";
+import ControlPanel from "./ControlPanel";
+
+import { useLiveChartContext } from "../hooks/useLiveChartContext";
 import { Event, LiveTableProps } from "../types";
 
 const LiveTable: React.FC<LiveTableProps> = ({
@@ -115,24 +118,11 @@ const LiveTable: React.FC<LiveTableProps> = ({
 
   return (
     <div className="mb-10">
-      <div className="mb-4 flex gap-4">
-        <button
-          className="p-2 bg-blue-500 hover:bg-blue-400 text-white border-none rounded"
-          onClick={togglePlayPause}
-        >
-          {isPlaying ? "Pause" : "Play"}
-        </button>
-        <button
-          className="p-2 bg-red-500 hover:bg-red-400 text-white border-none rounded"
-          onClick={handleResetAll}
-        >
-          Reset All
-        </button>
-        <p className="text-red-500 font-normal text-xs mt-5">
-          Please pause the data to be able to edit.
-        </p>
-      </div>
-
+      <ControlPanel
+          isPlaying={isPlaying}
+          togglePlayPause={togglePlayPause}
+          handleResetAll={handleResetAll}
+      />
       <div className="flex flex-col border border-gray-300 rounded overflow-hidden">
         <TableHeader />
         {currentEvents.map((event) => (
@@ -149,7 +139,6 @@ const LiveTable: React.FC<LiveTableProps> = ({
           />
         ))}
       </div>
-
       <PaginationControls
         currentPage={currentPage}
         handlePreviousPage={handlePreviousPage}

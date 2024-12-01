@@ -1,5 +1,6 @@
 // src/components/PaginationControls.tsx
 import React from "react";
+
 import { PaginationControlsProps } from "../types";
 
 const PaginationControls: React.FC<PaginationControlsProps> = ({

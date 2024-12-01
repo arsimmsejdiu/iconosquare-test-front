@@ -5,6 +5,7 @@ import { PaginationControlsProps } from "./PaginationControlsProps";
 import {TableCellProps} from "./TableCellProps";
 import {LiveChartProps} from "./LiveChartProps";
 import {State, Action, LiveChartContextProps} from "./HooksInterface";
+import {ControlPanelProps, LogoProps} from "./ControlPanelProps";
 
 export {
     Event,
@@ -15,5 +16,7 @@ export {
     LiveChartProps,
     State,
     Action,
-    LiveChartContextProps
+    LiveChartContextProps,
+    ControlPanelProps,
+    LogoProps
 };

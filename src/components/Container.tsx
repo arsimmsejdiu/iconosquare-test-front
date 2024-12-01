@@ -4,6 +4,7 @@ import {
   useLiveChartContext,
 } from "../hooks/useLiveChartContext";
 import { createRandomEvent } from "../utils/utils";
+
 import Content from "./Content";
 
 const ContainerContent = () => {
