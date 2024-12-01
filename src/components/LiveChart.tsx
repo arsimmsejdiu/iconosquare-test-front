@@ -9,10 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useLiveChartContext } from "../utils/hooks/useLiveChartContext";
-
-interface LiveChartProps {
-  onChartClick: (index: number) => void;
-}
+import {LiveChartProps} from "../types/LiveChartProps";
 
 const LiveChart: React.FC<LiveChartProps> = ({ onChartClick }) => {
   const { data } = useLiveChartContext();

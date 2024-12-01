@@ -1,30 +1,6 @@
-import React, { useContext, useReducer, createContext, ReactNode, Dispatch } from 'react';
+import React, { useContext, useReducer, createContext, ReactNode } from 'react';
 import { createRandomEvent } from '../utils';
-
-// Define the Event interface
-interface Event {
-    index: number;
-    value1: number;
-    value2: number;
-    comment: string;
-}
-
-// Define the State interface
-interface State {
-    events: Event[];
-}
-
-// Define the Action interface
-interface Action {
-    type: 'new_event' | 'update_event';
-    payload: Event;
-}
-
-// Define the context props
-interface LiveChartContextProps {
-    data: State;
-    dispatch: Dispatch<Action>;
-}
+import { Event, State, Action, LiveChartContextProps } from '../../types';
 
 // Create the LiveChartContext
 const LiveChartContext = createContext<LiveChartContextProps | undefined>(undefined);
