@@ -1,28 +1,34 @@
-import React, { useState } from 'react';
-import LiveTable from './LiveTable';
-import LiveChart from './LiveChart';
-import { useLiveChartContext } from '../utils/hooks/useLiveChartContext';
+import React, { useState } from "react";
+import LiveTable from "./LiveTable";
+import LiveChart from "./LiveChart";
+import { useLiveChartContext } from "../utils/hooks/useLiveChartContext";
 
 const Content = () => {
-    const { data } = useLiveChartContext();
-    const [editableCell, setEditableCell] = useState<{ index: number | null; field: string | null }>({
-        index: null,
-        field: null,
-    });
+  const { data } = useLiveChartContext();
+  const [editableCell, setEditableCell] = useState<{
+    index: number | null;
+    field: string | null;
+  }>({
+    index: null,
+    field: null,
+  });
 
-    const handleChartClick = (index: number) => {
-        const event = data.events.find((event) => event.index === index);
-        if (event) {
-            setEditableCell({ index, field: 'value1' });
-        }
-    };
+  const handleChartClick = (index: number) => {
+    const event = data.events.find((event) => event.index === index);
+    if (event) {
+      setEditableCell({ index, field: "value1" });
+    }
+  };
 
-    return (
-        <div className="mx-auto max-w-7xl px-8">
-            <LiveChart onChartClick={handleChartClick} />
-            <LiveTable editableCell={editableCell} setEditableCell={setEditableCell} />
-        </div>
-    );
+  return (
+    <div className="mx-auto max-w-7xl px-8">
+      <LiveChart onChartClick={handleChartClick} />
+      <LiveTable
+        editableCell={editableCell}
+        setEditableCell={setEditableCell}
+      />
+    </div>
+  );
 };
 
 export default Content;
