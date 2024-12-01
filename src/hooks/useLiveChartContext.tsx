@@ -1,6 +1,6 @@
 import React, { useContext, useReducer, createContext, ReactNode } from 'react';
-import { createRandomEvent } from '../utils';
-import { Event, State, Action, LiveChartContextProps } from '../../types';
+import { createRandomEvent } from '../utils/utils';
+import { Event, State, Action, LiveChartContextProps } from '../types';
 
 // Create the LiveChartContext
 const LiveChartContext = createContext<LiveChartContextProps | undefined>(undefined);

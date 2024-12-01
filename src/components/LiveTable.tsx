@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLiveChartContext } from "../utils/hooks/useLiveChartContext";
+import { useLiveChartContext } from "../hooks/useLiveChartContext";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 import PaginationControls from "./PaginationControls";

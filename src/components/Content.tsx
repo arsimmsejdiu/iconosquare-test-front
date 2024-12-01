@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LiveTable from "./LiveTable";
 import LiveChart from "./LiveChart";
-import { useLiveChartContext } from "../utils/hooks/useLiveChartContext";
+import { useLiveChartContext } from "../hooks/useLiveChartContext";
 
 const Content = () => {
   const { data } = useLiveChartContext();
@@ -14,7 +14,7 @@ const Content = () => {
   });
 
   const handleChartClick = (index: number) => {
-    const event = data.events.find((event) => event.index === index);
+    const event = data.events.find((event: any) => event.index === index);
     if (event) {
       setEditableCell({ index, field: "value1" });
     }

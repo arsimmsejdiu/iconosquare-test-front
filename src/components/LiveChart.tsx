@@ -8,7 +8,7 @@ import {
   YAxis,
   ResponsiveContainer,
 } from "recharts";
-import { useLiveChartContext } from "../utils/hooks/useLiveChartContext";
+import { useLiveChartContext } from "../hooks/useLiveChartContext";
 import {LiveChartProps} from "../types/LiveChartProps";
 
 const LiveChart: React.FC<LiveChartProps> = ({ onChartClick }) => {
