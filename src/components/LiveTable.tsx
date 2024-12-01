@@ -116,13 +116,13 @@ const LiveTable: React.FC<LiveTableProps> = ({ editableCell, setEditableCell }) 
         <div className="mb-10">
             <div className="mb-4 flex gap-4">
                 <button
-                    className="p-2 bg-blue-500 text-white border-none rounded"
+                    className="p-2 bg-blue-500 hover:bg-blue-400 text-white border-none rounded"
                     onClick={togglePlayPause}
                 >
                     {isPlaying ? 'Pause' : 'Play'}
                 </button>
                 <button
-                    className="p-2 bg-red-500 text-white border-none rounded"
+                    className="p-2 bg-red-500 hover:bg-red-400 text-white border-none rounded"
                     onClick={handleResetAll}
                 >
                     Reset All
@@ -191,14 +191,14 @@ const LiveTable: React.FC<LiveTableProps> = ({ editableCell, setEditableCell }) 
             <div className="flex justify-between mt-4">
                 <button
                     onClick={handlePreviousPage}
-                    className={`p-2 text-white border-none rounded ${currentPage === 0 ? 'bg-gray-500' : 'bg-blue-500'}`}
+                    className={`p-2 text-white border-none rounded ${currentPage === 0 ? 'bg-gray-500' : 'bg-blue-500 hover:bg-blue-400'}`}
                     disabled={currentPage === 0}
                 >
                     Previous
                 </button>
                 <button
                     onClick={handleNextPage}
-                    className={`p-2 text-white border-none rounded ${((currentPage + 1) * eventsPerPage >= modifiedData.size) ? 'bg-gray-500' : 'bg-blue-500'}`}
+                    className={`p-2 text-white border-none rounded ${((currentPage + 1) * eventsPerPage >= modifiedData.size) ? 'bg-gray-500' : 'bg-blue-500 hover:bg-blue-400'}`}
                     disabled={(currentPage + 1) * eventsPerPage >= modifiedData.size}
                 >
                     Next
